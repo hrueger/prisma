@@ -380,8 +380,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.5
+        version: 5.0.5
       strip-ansi:
         specifier: 6.0.1
         version: 6.0.1
@@ -632,8 +632,8 @@ importers:
         specifier: 1.22.8
         version: 1.22.8
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.5
+        version: 5.0.5
       simple-statistics:
         specifier: 7.8.3
         version: 7.8.3
@@ -830,8 +830,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.5
+        version: 5.0.5
       strip-ansi:
         specifier: 6.0.1
         version: 6.0.1
@@ -7560,7 +7560,7 @@ packages:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.3
-      minipass: 5.0.0
+      minipass: 7.0.4
       path-scurry: 1.10.1
     dev: true
 
@@ -12119,6 +12119,14 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf@5.0.5:
+    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      glob: 10.3.10
     dev: true
 
   /roarr@2.15.4:
