@@ -22,7 +22,7 @@
     "typescript": "5.2.2",
     "@types/debug": "4.1.12",
     "debug": "4.3.4",
-    "strip-ansi": "6.0.1"
+    "strip-ansi": "7.1.0"
   },
   "scripts": {
     "dev": "DEV=true node -r esbuild-register helpers/build.ts",
