@@ -27,7 +27,7 @@
     "scripts"
   ],
   "devDependencies": {
-    "@antfu/ni": "0.21.8",
+    "@antfu/ni": "0.21.12",
     "@opentelemetry/api": "1.7.0",
     "@swc/core": "1.2.204",
     "@swc/jest": "0.2.29",
@@ -70,8 +70,8 @@
     "tempy": "1.0.1",
     "terminal-link": "2.1.1",
     "tmp": "0.2.1",
-    "ts-node": "10.9.1",
-    "ts-pattern": "5.0.5",
+    "ts-node": "10.9.2",
+    "ts-pattern": "5.0.6",
     "typescript": "5.2.2",
     "yarn": "1.22.21"
   },
