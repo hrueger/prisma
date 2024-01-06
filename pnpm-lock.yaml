@@ -192,6 +192,19 @@ importers:
         specifier: 7.2.3
         version: 7.2.3
 
+  packages/adapter-d1:
+    dependencies:
+      '@prisma/driver-adapter-utils':
+        specifier: workspace:*
+        version: link:../driver-adapter-utils
+      async-mutex:
+        specifier: 0.4.0
+        version: 0.4.0
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^4.20231218.0
+        version: 4.20231218.0
+
   packages/adapter-libsql:
     dependencies:
       '@prisma/driver-adapter-utils':
@@ -1332,6 +1345,9 @@ importers:
       mssql:
         specifier: 10.0.1
         version: 10.0.1
+      object-inspect:
+        specifier: ^1.13.1
+        version: 1.13.1
       ora:
         specifier: 5.4.1
         version: 5.4.1
@@ -1882,6 +1898,10 @@ packages:
 
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+    dev: true
+
+  /@cloudflare/workers-types@4.20231218.0:
+    resolution: {integrity: sha512-Vs1FKjfUjXYGbCsXzkl+ITp0Iyb6QiW6+vTERTNThC+v96T0IvPVAioH4tT20rXwoxAfxh380mAaxYtTrJUNVg==}
     dev: true
 
   /@codspeed/benchmark.js-plugin@2.3.1(benchmark@2.1.4):
@@ -10804,6 +10824,10 @@ packages:
 
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
+    dev: true
+
+  /object-inspect@1.13.1:
+    resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==}
     dev: true
 
   /object-keys@1.1.1:

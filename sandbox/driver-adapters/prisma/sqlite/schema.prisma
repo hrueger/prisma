@@ -1,0 +1,104 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../../node_modules/.prisma/client"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model type_test {
+  id                    Int                         @id @default(autoincrement())
+  smallint_column       Int                         
+  smallint_column_null  Int?
+  int_column            Int
+  int_column_null       Int?
+  bigint_column         BigInt
+  bigint_column_null    BigInt?
+  float_column          Float                       
+  float_column_null     Float?                      
+  double_column         Float
+  double_column_null    Float?
+  decimal_column        Decimal                     
+  decimal_column_null   Decimal?                    
+  boolean_column        Boolean
+  boolean_column_null   Boolean?
+  char_column           String                      
+  char_column_null      String?                     
+  varchar_column        String                      
+  varchar_column_null   String?                     
+  text_column           String
+  text_column_null      String?
+  date_column           DateTime                    
+  date_column_null      DateTime?                   
+  time_column           DateTime                    
+  time_column_null      DateTime?                   
+  datetime_column       DateTime                    
+  datetime_column_null  DateTime?                   
+  timestamp_column      DateTime                    
+  timestamp_column_null DateTime?                   
+  json_column           String
+  json_column_null      String?
+  enum_column           String
+  enum_column_null      String?
+}
+
+// This will eventually supersede type_test
+model type_test_2 {
+  id                   String    @id @default(cuid())
+  datetime_column      DateTime  @default(now()) 
+  datetime_column_null DateTime? 
+}
+
+model Child {
+  c          String  @unique
+  c_1        String
+  c_2        String
+  parentId   String? @unique
+  non_unique String?
+  id         String  @id
+
+  @@unique([c_1, c_2])
+}
+
+model Parent {
+  p          String  @unique
+  p_1        String
+  p_2        String
+  non_unique String?
+  id         String  @id
+
+  @@unique([p_1, p_2])
+}
+
+model Author {
+  id        Int    @id @default(autoincrement())
+  firstName String
+  lastName  String
+  age       Int
+  posts     Post[]
+
+  @@map("authors")
+}
+
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String?
+  published Boolean @default(false)
+  authorId  Int?
+  author    Author? @relation(fields: [authorId], references: [id])
+
+  @@index([authorId], name: "author_id")
+}
+
+model Product {
+  id              String @id @default(cuid())
+  properties      String
+  properties_null String?
+}
+
+model leak_test {
+  id String @id @default(cuid())
+}
